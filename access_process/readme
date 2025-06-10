@@ -1,0 +1,6 @@
+python access_process/1_OSM_process.py
+python access_process/2_LC_process.py
+python access_process/3_merge.py
+python access_process/4_clip_buildingtype.py
+python access_process/whitebox_tools/cost_distance.py
+python access_process/6_access_stats.py
