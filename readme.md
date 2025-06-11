@@ -53,12 +53,13 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
     python access_process/6_access_stats.py
 
 * **output**
+The results are saved in the `./access_process/result`: 
 ```
 access_process/
 └── result/
-    ├── accum_Educational.xlsx
-    ├── accum_Educational.tif
-    └── backlink_Educational.tif
+    ├── accum_Educational.xlsx    – Histogram data of accessibility from each residential building in the example city. The end of the table includes the city's mean and median accessibility.
+    ├── accum_Educational.tif    – Accessibility raster map of the example city.
+    └── backlink_Educational.tif  – Backlink raster for tracing the shortest path from each building.
 ```
 
 ### Availability and Diversity
