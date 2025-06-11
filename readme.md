@@ -52,7 +52,7 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
     ```bash
     python access_process/6_access_stats.py
 
-* **output**
+* **output**  
 The results are saved in the `./access_process/result`, Below is an example for the Educational buildings:
 ```
 access_process/
