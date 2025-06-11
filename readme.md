@@ -70,7 +70,7 @@ access_process/
 2. Calculate the availability and diversity for each community life circle 
     ```bash
     python availability_diversity_process/2_cal_availability_diversity.py
-* **Result**
+* **Result**  
 The results are saved in the `./availability_diversity_process/result`:
 ```
 availability_diversity_process/
@@ -95,16 +95,13 @@ We calculated two key indicators: inequality in residential capacity allocation 
     ```bash
     python inequal_allocation_process/3_cal_inequality.py
 
-* **Result**
+* **Result**  
 The results are saved in the `./inequal_allocation_process/result`:
 ```
 inequal_allocation_process/
 └── result/
     └── Jiaxing_inequality.csv  – The `Gini_coefficient` indicates the degree of inequality in the allocation of residential capacity, whereas the other columns represent the per capita infrastructure occupation across different building categories.
 ```
-
-   
-* **To train and test the framework on any 109 cities contained in this study:**
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
