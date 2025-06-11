@@ -6,18 +6,15 @@ Author: Zhuohong Li, Linxin Li, Ting Hu3, Mofan Cheng, Wei He, Tong Qiu, Liangpe
 ## Analysis
 * Please run "pip install -r requirements_analysis.txt" to install the dependencies before executing any Python file.
 * The analysis is divided into three main components:
-  
-<div style="margin-left:40px">
 
 | Component                                                         | Folder                          |
 |-------------------------------------------------------------------|---------------------------------|
-| 1. Accessibility                                                  | `#access_process`               |
-| 2. Availability and Diversity                                     | `#availability_diversity_process` |
-| 3. Residential Capacity Allocation and Infrastructure Occupation | `#inequal_allocation_process`   |
+| 1. Accessibility                                                  | `access_process`               |
+| 2. Availability and Diversity                                     | `availability_diversity_process` |
+| 3. Residential Capacity Allocation and Infrastructure Occupation | `inequal_allocation_process`   |
 
 To reproduce each component of the analysis, please refer to the `README.md` file in the corresponding folder and follow the instructions.
 
-</div>
 ### Accessibility
 python access_process/1_OSM_process.py
 
