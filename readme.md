@@ -52,7 +52,7 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
     ```bash
     python access_process/6_access_stats.py
 
-* **output**  
+* **Result**  
 The results are saved in the `./access_process/result`, Below is an example for the Educational buildings:
 ```
 access_process/
@@ -62,21 +62,46 @@ access_process/
     └── backlink_Educational.tif  – Backlink raster for tracing the shortest path from each building.
 ```
 
-### Availability and Diversity
-1. Count the number and types of buildings within each residential community living circle  
+### Availability and Diversity  
+* **To conduct the analysis, follow these steps:**  
+1. Count the number and types of buildings within each community life circle  
     ```bash
     python availability_diversity_process/1_nearby_buildings_stats.py
-2. Calculate the availability and diversity for each living circle
+2. Calculate the availability and diversity for each community life circle 
     ```bash
     python availability_diversity_process/2_cal_availability_diversity.py
+* **Result**
+The results are saved in the `./availability_diversity_process/result`:
+```
+availability_diversity_process/
+└── result/
+    ├── Jiaxing_availability_diversity.csv    – The availability and diversity of each community life circle, and the mean values of the whole city.
+    └── Jiaxing_buildings.csv                 – The number and types of buildings within each community life circle.
+```
 
-### Residential capacity allocation and Infrastructure occupation
-python inequal_allocation_process/1_raster_clip.py
+### Residential capacity allocation and Infrastructure occupation  
+We calculated two key indicators: inequality in residential capacity allocation and per capita infrastructure occupation.
 
-python inequal_allocation_process/2_cal_attribute.py
+* **To conduct the analysis, follow these steps:**
 
-python inequal_allocation_process/3_cal_inequality.py
+1. Clip building height and population data to the extent of the example city  
+    ```bash
+    python inequal_allocation_process/1_raster_clip.py
+2. Calculate building-level attributes  
+    ```bash
+    python inequal_allocation_process/2_cal_attribute.py
+    ```
+3. Compute inequality in residential capacity allocation and per capita infrastructure occupation based on the statistical results  
+    ```bash
+    python inequal_allocation_process/3_cal_inequality.py
 
+* **Result**
+The results are saved in the `./inequal_allocation_process/result`:
+```
+inequal_allocation_process/
+└── result/
+    └── Jiaxing_inequality.csv  – The `Gini_coefficient` indicates the degree of inequality in the allocation of residential capacity, whereas the other columns represent the per capita infrastructure occupation across different building categories.
+```
 
    
 * **To train and test the framework on any 109 cities contained in this study:**
