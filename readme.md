@@ -53,7 +53,12 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
     python access_process/6_access_stats.py
 
 * **output**
-<pre> access_process/ └── result/ ├── accum_Educational.xlsx ├── accum_Educational.tif └── backlink_Educational.tif </pre>
+    ```bash
+    access_process/
+    └── result/
+    ├── accum_Educational.xlsx
+    ├── accum_Educational.tif
+    └── backlink_Educational.tif
 
 ### Availability and Diversity
 python availability_diversity_process/1_nearby_buildings_stats.py
