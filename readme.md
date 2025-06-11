@@ -15,7 +15,7 @@ This version of the data includes (1) Building-level functional maps of 109 Chin
 The original data sources required to create the map product and analyse the multi-dimensional built environment are as follows: [**The 1-meter Google Earth optical imagery**](https://earth.google.com), [**the 10-meter nighttime lights (SGDSAT-1)**](https://sdg.casearth.cn/en), and [**the building height data (CNBH-10m)**](https://zenodo.org/records/7827315). Labels were derived from: (1) Building footprint data, including [**the CN-OpenData**](https://doi.org/10.11888/Geogra.tpdc.271702) and [**the East Asia Building Dataset**](https://zenodo.org/records/8174931); and (2) Land use and AOI data used for constructing urban functional annotation are retrieved from [**the OpenStreetMap**](https://www.openstreetmap.org) and [**the EULUC-China dataset**](https://doi.org/10.1016/j.scib.2019.12.007). The first 1-meter resolution national-scale land-cover map used to conduct the accessibility analysis is available in our previous study: [**SinoLC-1**](https://doi.org/10.5281/zenodo.7707461). The housing inequality and infrastructure allocation analysis was conducted based on the 100-meter gridded population dataset from [**China's seventh census**](https://figshare.com/s/d9dd5f9bb1a7f4fd3734?file=43847643).
 ## Multi-dimensional Built Environment Analysis
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.
-* Please install the example dataset to `./input_data` from:e
+* Please install the example dataset(Jiaxing City) to `./input_data` from:e
 * The analysis is divided into three main components:
 
 | Component                                                         | Folder                          |
@@ -24,7 +24,84 @@ The original data sources required to create the map product and analyse the mul
 | Availability and Diversity                                     | `./availability_diversity_process` |
 | Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
 
-To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
+## Accessibility
+We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, and Public Service building.
+* **To conduct the accessibility analysis, follow these steps:**
+
+1. Assign speeds to OSM road network and convert to raster
+    ```bash
+    python access_process/1_OSM_process.py
+
+2. Assign speeds to land cover types  
+    ```bash
+    python access_process/2_LC_process.py
+
+3. Merge land cover and road network to generate the cost raster  
+    ```bash
+   python access_process/3_merge.py
+
+4. Clip relevant building types (Healthcare, Educational, Public Services)
+    ```bash
+    python access_process/4_clip_buildingtype.py
+
+5. Run Cost Distance Analysis with WhiteboxTools
+    ```bash
+    python access_process/whitebox_tools/cost_distance.py
+
+6. Calculate travel time from tesidential buildings to nearest target building
+    ```bash
+    python access_process/6_access_stats.py
+
+* **Result**  
+The results are saved in the `./access_process/result`, Below is an example for the Educational buildings:
+```
+access_process/
+└── result/
+    ├── accum_Educational.xlsx    – Histogram data of accessibility from each residential building in the example city. The end of the table includes the city's mean and median accessibility.
+    ├── accum_Educational.tif     – Accessibility raster map of the example city.
+    └── backlink_Educational.tif  – Backlink raster for tracing the shortest path from each building.
+```
+
+### Availability and Diversity  
+* **To conduct the analysis, follow these steps:**  
+1. Count the number and types of buildings within each community life circle  
+    ```bash
+    python availability_diversity_process/1_nearby_buildings_stats.py
+2. Calculate the availability and diversity for each community life circle 
+    ```bash
+    python availability_diversity_process/2_cal_availability_diversity.py
+* **Result**  
+The results are saved in the `./availability_diversity_process/result`:
+```
+availability_diversity_process/
+└── result/
+    ├── Jiaxing_availability_diversity.csv    – The availability and diversity of each community life circle, and the mean values of the whole city.
+    └── Jiaxing_buildings.csv                 – The number and types of buildings within each community life circle.
+```
+
+### Residential capacity allocation and Infrastructure occupation  
+We calculated two key indicators: inequality in residential capacity allocation and per capita infrastructure occupation.
+
+* **To conduct the analysis, follow these steps:**
+
+1. Clip building height and population data to the extent of the example city  
+    ```bash
+    python inequal_allocation_process/1_raster_clip.py
+2. Calculate building-level attributes  
+    ```bash
+    python inequal_allocation_process/2_cal_attribute.py
+    ```
+3. Compute inequality in residential capacity allocation and per capita infrastructure occupation based on the statistical results  
+    ```bash
+    python inequal_allocation_process/3_cal_inequality.py
+
+* **Result**  
+The results are saved in the `./inequal_allocation_process/result`:
+```
+inequal_allocation_process/
+└── result/
+    └── Jiaxing_inequality.csv  – The `Gini_coefficient` indicates the degree of inequality in the allocation of residential capacity, whereas the other columns represent the per capita infrastructure occupation across different building categories.
+```
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
