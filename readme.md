@@ -1,14 +1,12 @@
 # Satellite Mapping of Every Building’s Function in Urban China Reveals Deep Built Environment Inequality
-**Author: Zhuohong Li, Linxin Li, Ting Hu, Mofan Cheng, Wei He, Tong Qiu, Liangpei Zhang, and Hongyan Zhang**
-
-**Affiliation: Duke University, Wuhan University, Nanjing University of Information Science and Technology, and China University of Geosciences**
-
-## Background
-As the world’s most rapidly urbanizing country, China now faces mounting challenges from growing inequalities in the built environment, including disparities in access to essential infrastructure and diverse functional facilities. Yet these urban inequalities have remained unclear due to coarse observation scales and limited analytical scopes. In this study, we present the first building-level functional map of China, covering 110 million individual buildings across 109 cities using 69 terabytes of multi-modal satellite imagery. The national-scale map is validated by government reports and 5,280,695 observation points, showing strong agreement with external benchmarks. This enables the first nationwide, multi-dimensional assessment of inequality in the built environment across city tiers, geographical regions, and intra-city zones.
+<!-- **Author: Zhuohong Li, Linxin Li, Ting Hu, Mofan Cheng, Wei He, Tong Qiu, Liangpei Zhang, and Hongyan Zhang** -->
+<!-- ****Affiliation: Duke University, Wuhan University, Nanjing University of Information Science and Technology, and China University of Geosciences**** -->
+In this study, we present the first building-level functional map of China, covering 110 million individual buildings across 109 cities using 69 terabytes of multi-modal satellite imagery. The national-scale map is validated by government reports and 5,280,695 observation points, showing strong agreement with external benchmarks. This enables the first nationwide, multi-dimensional assessment of inequality in the built environment across city tiers, geographical regions, and intra-city zones.
 
 <img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Background.png" width="70%">
 * This project contains the complete protocol for downloading the building-level map products and reproducing the (1) building-level mapping and (2) multi-dimensional built environment analysis process.
 * This code should be run in a Python environment.
+
 ## The first building-level functional map of urban China
 ### The complete map product and user guide are released at: https://figshare.com/s/f3979d3199a394911337
 <img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Study_area.png" width="70%">
@@ -26,38 +24,7 @@ The original data sources required to create the map product and analyse the mul
 | Availability and Diversity                                     | `./availability_diversity_process` |
 | Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
 
-### Accessibility
-We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, or Public Service building.
-* **Input**
-
-* **Output**
-* **To train and conduct the mapping with the Paraformer, follow these steps:**
-
-python access_process/1_OSM_process.py
-
-python access_process/2_LC_process.py
-
-python access_process/3_merge.py
-
-python access_process/4_clip_buildingtype.py
-
-python access_process/whitebox_tools/cost_distance.py
-
-python access_process/6_access_stats.py
-
-
-### Availability and Diversity
-python availability_diversity_process/1_nearby_buildings_stats.py
-
-python availability_diversity_process/2_cal_availability_diversity.py
-
-### Residential capacity allocation and Infrastructure occupation
-python inequal_allocation_process/1_raster_clip.py
-
-python inequal_allocation_process/2_cal_attribute.py
-
-python inequal_allocation_process/3_cal_inequality.py
-
+To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
