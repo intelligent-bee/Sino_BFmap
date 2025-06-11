@@ -6,7 +6,6 @@ Author: Zhuohong Li, Linxin Li, Ting Hu3, Mofan Cheng, Wei He, Tong Qiu, Liangpe
 ## Analysis
 * Please run "pip install -r requirements_analysis.txt" to install the dependencies before executing any Python file.
 * The analysis is divided into three main components:
-* 
 | Component                                                         | Folder                          |
 |-------------------------------------------------------------------|---------------------------------|
 | 1. Accessibility                                                  | `#access_process`               |
