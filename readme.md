@@ -3,7 +3,7 @@
 
 **Affiliation: Duke University, Wuhan University, Nanjing University of Information Science and Technology, and China University of Geosciences**
 
-##Background
+## Background
 As the world’s most rapidly urbanizing country, China now faces mounting challenges from growing inequalities in the built environment, including disparities in access to essential infrastructure and diverse functional facilities. Yet these urban inequalities have remained unclear due to coarse observation scales and limited analytical scopes. In this study, we present the first building-level functional map of China, covering 110 million individual buildings across 109 cities using 69 terabytes of multi-modal satellite imagery. The national-scale map is validated by government reports and 5,280,695 observation points, showing strong agreement with external benchmarks. This enables the first nationwide, multi-dimensional assessment of inequality in the built environment across city tiers, geographical regions, and intra-city zones.
 
 * This project contains the complete protocol for downloading the building-level map products and reproducing the (1) building-level mapping and (2) multi-dimensional built environment analysis process.
@@ -27,6 +27,27 @@ The original data sources required to create the map product and analyse the mul
 To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
 
 ## Building functional mapping
+The mapping process contains segmentation and object classification parts that are shown below:
+<img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Building_function-mapping-l.png" width="70%">
+### Training Instructions of Semantic Segmentation Model (Paraformer)
+We provide our original training lists for all 109 cities in the ./All_109_cities_trainlists/ directory.
+* **To train and conduct the mapping with the Paraformer, follow these steps:**
+1. Download the imagenet21k ViT pre-train model at [**Pre-train ViT**](https://drive.google.com/file/d/10Ao75MEBlZYADkrXE4YLg6VObvR0b2Dr/view?usp=sharing) and put it at *"./networks/pre-train_model/imagenet21k"*
+   
+2. Taking the urban building mapping of Jiaxing City as an example, download the preprocessed training dataset (approximately 80GB per city) and put it at *"./dataset/Chesapeake_NewYork_dataset"*.
+   
+3. Run the "Train" command to train the Paraformer at the example city:
+   ```bash
+   python train.py --dataset 'Building_mapping_sample_Jiaxing' --batch_size 10 --max_epochs 20 --savepath *save path of your folder* --gpu 0
+4. After training, run the "Test" command to conduct the city-scale mapping:
+   ```bash
+   python test.py --dataset 'Building_mapping_sample_Jiaxing' --model_path *The path of trained .pth file* --save_path *To save the inferred results* --gpu 0
+   
+* **To train and test the framework on any 109 cities contained in this study:**
+
+1. Generate a train and test list (.csv) of your dataset (an example is in the "dataset" folder).
+2. Add your dataset_config in the "train.py" and "test.py" files.
+3. Run the command above by changing the city name.
 ## Description: 
 * To reproduce all experimental results, please download and preprocess the complete dataset as described in our paper: https://figshare.com/s/f3979d3199a394911337.
 
