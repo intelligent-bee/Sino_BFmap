@@ -13,7 +13,7 @@ Author: Zhuohong Li, Linxin Li, Ting Hu3, Mofan Cheng, Wei He, Tong Qiu, Liangpe
 | Availability and Diversity                                     | `availability_diversity_process` |
 | Residential Capacity Allocation and Infrastructure Occupation | `inequal_allocation_process`   |
 
-To reproduce each component of the analysis, please refer to the `README.md` file in the corresponding folder and follow the instructions.
+To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
 
 ### Accessibility
 python access_process/1_OSM_process.py
