@@ -26,7 +26,38 @@ The original data sources required to create the map product and analyse the mul
 | Availability and Diversity                                     | `./availability_diversity_process` |
 | Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
 
-To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
+### Accessibility
+We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, or Public Service building.
+* **Input**
+
+* **Output**
+* **To train and conduct the mapping with the Paraformer, follow these steps:**
+
+python access_process/1_OSM_process.py
+
+python access_process/2_LC_process.py
+
+python access_process/3_merge.py
+
+python access_process/4_clip_buildingtype.py
+
+python access_process/whitebox_tools/cost_distance.py
+
+python access_process/6_access_stats.py
+
+
+### Availability and Diversity
+python availability_diversity_process/1_nearby_buildings_stats.py
+
+python availability_diversity_process/2_cal_availability_diversity.py
+
+### Residential capacity allocation and Infrastructure occupation
+python inequal_allocation_process/1_raster_clip.py
+
+python inequal_allocation_process/2_cal_attribute.py
+
+python inequal_allocation_process/3_cal_inequality.py
+
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
