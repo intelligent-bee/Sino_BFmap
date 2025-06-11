@@ -49,16 +49,20 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
     ```bash
     python access_process/2_LC_process.py
 
-4. Merge Land Cover and Road Network into Cost Raster  
-    python access_process/3_merge.py
+3. Merge Land Cover and Road Network into Cost Raster  
+    ```bash
+   python access_process/3_merge.py
 
-5. Clip Relevant Building Types (Healthcare, Educational, Public Services)  
+4. Clip Relevant Building Types (Healthcare, Educational, Public Services)
+    ```bash
     python access_process/4_clip_buildingtype.py
 
-6. Run Cost Distance Analysis with WhiteboxTools  
+5. Run Cost Distance Analysis with WhiteboxTools
+    ```bash
     python access_process/whitebox_tools/cost_distance.py
 
-7. Calculate Travel Time from Residential Buildings to Nearest Target Building  
+6. Calculate Travel Time from Residential Buildings to Nearest Target Building
+    ```bash
     python access_process/6_access_stats.py
 
 * **output**
