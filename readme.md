@@ -32,6 +32,7 @@ The mapping process contains segmentation and object classification parts that a
 ### Training Instructions of Semantic Segmentation Model (Paraformer)
 We provide our original training lists for all 109 cities in the ` ./All_109_cities_trainlists/`  directory.
 * **To train and conduct the mapping with the Paraformer, follow these steps:**
+  
 1. Download the imagenet21k ViT pre-train model at [**Pre-train ViT**](https://drive.google.com/file/d/10Ao75MEBlZYADkrXE4YLg6VObvR0b2Dr/view?usp=sharing) and put it at ` ./networks/pre-train_model/imagenet21k` 
    
 2. Taking the urban building mapping of Jiaxing City as an example, download the preprocessed training dataset (approximately 80GB per city) and put it at ` ./dataset/Chesapeake_NewYork_dataset` .
@@ -48,6 +49,8 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
 1. Edit the root storage direction of the train and test list (.csv).
 2. Add your dataset_config in the "train.py" and "test.py" files.
 3. Run the command above by changing the city name.
+
+### Post-processing Based on the Object Classification Model (Mask RCNN)
 ## Description: 
 * To reproduce all experimental results, please download and preprocess the complete dataset as described in our paper: https://figshare.com/s/f3979d3199a394911337.
 
