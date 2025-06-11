@@ -25,10 +25,10 @@ The original data sources required to create the map product and analyse the mul
 | Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
 
 ## Accessibility  
-The code for calculating the accessibility of healthcare, education and public service resources
+The code for calculating the accessibility of healthcare, education, and public service resources
 * **To conduct the accessibility analysis, follow these steps:**
 
-1. Assign speeds to OSM road network and convert to raster
+1. Assign speeds to the OSM road network and convert to raster
     ```bash
     python access_process/1_OSM_process.py
 
@@ -48,12 +48,12 @@ The code for calculating the accessibility of healthcare, education and public s
     ```bash
     python access_process/whitebox_tools/cost_distance.py
 
-6. Calculate travel time from tesidential buildings to nearest target building
+6. Calculate travel time from residential buildings to the nearest target building
     ```bash
     python access_process/6_access_stats.py
 
 * **Result**  
-The results are saved in the `./access_process/result`, Below is an example for the Educational buildings:
+The results are saved in the `./access_process/result`. Below is an example for the Educational buildings:
 ```
 access_process/
 └── result/
@@ -63,12 +63,12 @@ access_process/
 ```
 
 ### Availability and Diversity  
-The code for calculating the facility availability and diversity of the community life circle 
+The code for calculating the facility availability and diversity of the community life cycle 
 * **To conduct the analysis, follow these steps:**  
 1. Count the number and types of buildings within each community life circle  
     ```bash
     python availability_diversity_process/1_nearby_buildings_stats.py
-2. Calculate the availability and diversity for each community life circle 
+2. Calculate the availability and diversity for each community life cycle 
     ```bash
     python availability_diversity_process/2_cal_availability_diversity.py
 * **Result**  
@@ -118,7 +118,7 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
   
 1. Download the imagenet21k ViT pre-train model at [**Pre-train ViT**](https://drive.google.com/file/d/10Ao75MEBlZYADkrXE4YLg6VObvR0b2Dr/view?usp=sharing) and put it at ` ./networks/pre-train_model/imagenet21k` 
    
-2. Taking the urban building mapping of Jiaxing City as an example, download the preprocessed training dataset (approximately 80GB per city) and put it at ` ./dataset/Chesapeake_NewYork_dataset` .
+2. Taking the urban building mapping of Jiaxing City as an example, download the preprocessed training dataset (approximately 80GB per city) and put it at ` ./Building_mapping_01_semantic_segmentation(Paraformer)/dataset/`.
    
 3. Run the "Train" command to train the Paraformer at the example city:
    ```bash
