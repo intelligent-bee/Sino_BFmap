@@ -9,9 +9,9 @@ Author: Zhuohong Li, Linxin Li, Ting Hu3, Mofan Cheng, Wei He, Tong Qiu, Liangpe
 
 | Component                                                         | Folder                          |
 |-------------------------------------------------------------------|---------------------------------|
-| 1. Accessibility                                                  | `access_process`               |
-| 2. Availability and Diversity                                     | `availability_diversity_process` |
-| 3. Residential Capacity Allocation and Infrastructure Occupation | `inequal_allocation_process`   |
+| Accessibility                                                  | `access_process`               |
+| Availability and Diversity                                     | `availability_diversity_process` |
+| Residential Capacity Allocation and Infrastructure Occupation | `inequal_allocation_process`   |
 
 To reproduce each component of the analysis, please refer to the `README.md` file in the corresponding folder and follow the instructions.
 
