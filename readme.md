@@ -28,9 +28,8 @@ To reproduce each component of the analysis, please refer to the `readme.md` fil
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
-1. Edit the root storage direction of the train and test list (.csv).
-2. Add your dataset_config in the "train.py" and "test.py" files.
-3. Run the command above by changing the city name.
+1. Download the population map, building height map and building function map to the `input_data` folder
+2. Run the command above by changing the city name.
 
 ## Building functional mapping
 The mapping process contains segmentation and object classification parts that are shown below:
