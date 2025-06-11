@@ -16,7 +16,7 @@ from scipy.interpolate import interp1d
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 city_dict={
     'Shanghai': '上海',
     'Beijing': '北京',
@@ -138,12 +138,11 @@ def gini_coefficient(x, y):
     return Gini
 if __name__ == '__main__':
     root=ROOT_DIR
-    city_name='Jiaxing'
+    city_name=CITY_NAME
     class_name1=['Residential','Commercial','Public service','Public health','Sport and art','Educational','Industrial','Administrative']
     output_df = {'city': [], 'Gini_coefficient': []}
     division_file=gpd.read_file(os.path.join(root,'input_data/GS1822_2019/市（等积投影）.shp'))
     population_path=os.path.join(root,'input_data/PopSE_China2020_100m_rep.tif')
-    pass
     with rasterio.open(population_path) as src:
         shapes=division_file.to_crs(src.crs)
         temp=shapes[shapes['市'].str.startswith(city_dict[city_name])]

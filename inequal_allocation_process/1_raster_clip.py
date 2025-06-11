@@ -16,7 +16,7 @@ import time
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 
 def clip_and_resample_tif_by_shp(input_tif, shapes, output_tif, target_crs, target_resolution=1.0, resampling_method=Resampling.bilinear):
     # 加载shapefile，获取其地理范围
@@ -104,7 +104,7 @@ def reproject_tif(input,output,target_crs):
 if __name__ == "__main__":
     root = ROOT_DIR
     input_folder = os.path.join(root, 'input_data')
-    city_name = 'Jiaxing'
+    city_name = CITY_NAME
     population_path = os.path.join(input_folder,'PopSE_China2020_100m_rep.tif')
     bh_path = os.path.join(input_folder,f'{city_name}_BH_rep.tif')
     shp_file = os.path.join(input_folder,'building_map', f'{city_name}.shp')

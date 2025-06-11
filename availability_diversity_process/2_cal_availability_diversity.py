@@ -17,7 +17,7 @@ import ast
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 
 
 def get_result(input,output):
@@ -55,7 +55,7 @@ def get_result(input,output):
 if __name__ == '__main__':
 
     root=ROOT_DIR
-    city_list=['Jiaxing']
+    city_list=[CITY_NAME]
     for city_name in tqdm(city_list):
         city_result=os.path.join(root,'availability_diversity_process/result',f'{city_name}_buildings.csv')
         output=os.path.join(root,'availability_diversity_process/result',f'{city_name}_availability_diversity.csv')
