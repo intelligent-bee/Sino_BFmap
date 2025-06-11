@@ -63,9 +63,12 @@ access_process/
 ```
 
 ### Availability and Diversity
-python availability_diversity_process/1_nearby_buildings_stats.py
-
-python availability_diversity_process/2_cal_availability_diversity.py
+1. Count the number and types of buildings within each residential community living circle  
+    ```bash
+    python availability_diversity_process/1_nearby_buildings_stats.py
+2. Calculate the availability and diversity for each living circle
+    ```bash
+    python availability_diversity_process/2_cal_availability_diversity.py
 
 ### Residential capacity allocation and Infrastructure occupation
 python inequal_allocation_process/1_raster_clip.py
