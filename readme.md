@@ -6,7 +6,7 @@ Author: Zhuohong Li, Linxin Li, Ting Hu, Mofan Cheng, Wei He, Tong Qiu, Liangpei
 * This code should be run in a python environment.
 
 ## Analysis
-* Please run "pip install -r requirements_analysis.txt" to install the dependencies before executing any python file.
+* Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any python file.
 * Please install the demo dataset to `input_data` from:
 * The analysis is divided into three main components:
 
