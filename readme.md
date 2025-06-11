@@ -41,19 +41,19 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
 
 * **To conduct the accessibility analysis, follow these steps:**
 
-1. Assign Speeds to OSM Road Network and Convert to Raster
+1. Assign speeds to OSM road network and convert to raster
     ```bash
     python access_process/1_OSM_process.py
 
-2. Assign Speeds to Land Cover Types  
+2. Assign speeds to land cover types  
     ```bash
     python access_process/2_LC_process.py
 
-3. Merge Land Cover and Road Network into Cost Raster  
+3. Merge land cover and road network to generate the cost raster  
     ```bash
    python access_process/3_merge.py
 
-4. Clip Relevant Building Types (Healthcare, Educational, Public Services)
+4. Clip relevant building types (Healthcare, Educational, Public Services)
     ```bash
     python access_process/4_clip_buildingtype.py
 
@@ -61,7 +61,7 @@ We calculated the travel time for residents in 109 Chinese cities from their hom
     ```bash
     python access_process/whitebox_tools/cost_distance.py
 
-6. Calculate Travel Time from Residential Buildings to Nearest Target Building
+6. Calculate travel time from tesidential buildings to nearest target building
     ```bash
     python access_process/6_access_stats.py
 
