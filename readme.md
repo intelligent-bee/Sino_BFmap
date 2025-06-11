@@ -5,6 +5,7 @@
 
 ## Background
 As the world’s most rapidly urbanizing country, China now faces mounting challenges from growing inequalities in the built environment, including disparities in access to essential infrastructure and diverse functional facilities. Yet these urban inequalities have remained unclear due to coarse observation scales and limited analytical scopes. In this study, we present the first building-level functional map of China, covering 110 million individual buildings across 109 cities using 69 terabytes of multi-modal satellite imagery. The national-scale map is validated by government reports and 5,280,695 observation points, showing strong agreement with external benchmarks. This enables the first nationwide, multi-dimensional assessment of inequality in the built environment across city tiers, geographical regions, and intra-city zones.
+
 <img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Background.png" width="70%">
 * This project contains the complete protocol for downloading the building-level map products and reproducing the (1) building-level mapping and (2) multi-dimensional built environment analysis process.
 * This code should be run in a Python environment.
