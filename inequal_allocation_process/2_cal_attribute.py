@@ -143,6 +143,6 @@ if __name__ == '__main__':
     buildings['Area'] = buildings['geometry'].area
     buildings_filtered = buildings[[ 'idx','class', 'Population','Height','Area']]
 
-    buildings_filtered.to_csv(os.path.join(root,'inequal_allocation_process/result',f'{city_name}.csv'), index=False)
+    buildings_filtered.to_csv(os.path.join(root,'temp',f'{city_name}_attribute.csv'), index=False)
     population_raster.close()
     height_raster.close()
