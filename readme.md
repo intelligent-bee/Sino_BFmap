@@ -27,7 +27,7 @@ The original data sources required to create the map product and analyse the mul
 ## Accessibility
 We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, and Public Service building.
 * **Directory Structure**
-```bash
+
 access_process/
 │
 ├── 1_OSM_process.py              # Process OSM network into speed raster
