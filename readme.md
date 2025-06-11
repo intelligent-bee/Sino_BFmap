@@ -24,8 +24,8 @@ The original data sources required to create the map product and analyse the mul
 | Availability and Diversity                                     | `./availability_diversity_process` |
 | Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
 
-## Accessibility
-We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, and Public Service building.
+## Accessibility  
+The code for calculating the accessibility of healthcare, education and public service resources
 * **To conduct the accessibility analysis, follow these steps:**
 
 1. Assign speeds to OSM road network and convert to raster
@@ -63,6 +63,7 @@ access_process/
 ```
 
 ### Availability and Diversity  
+The code for calculating the facility availability and diversity of the community life circle 
 * **To conduct the analysis, follow these steps:**  
 1. Count the number and types of buildings within each community life circle  
     ```bash
@@ -80,7 +81,7 @@ availability_diversity_process/
 ```
 
 ### Residential capacity allocation and Infrastructure occupation  
-We calculated two key indicators: inequality in residential capacity allocation and per capita infrastructure occupation.
+The code for calculating the inequality in residential capacity allocation and per capita infrastructure occupation.
 
 * **To conduct the analysis, follow these steps:**
 
