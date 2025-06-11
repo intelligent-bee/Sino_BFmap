@@ -15,7 +15,7 @@ This version of the data includes (1) Building-level functional maps of 109 Chin
 The original data sources required to create the map product and analyse the multi-dimensional built environment are as follows: [**The 1-meter Google Earth optical imagery**](https://earth.google.com), [**the 10-meter nighttime lights (SGDSAT-1)**](https://sdg.casearth.cn/en), and [**the building height data (CNBH-10m)**](https://zenodo.org/records/7827315). Labels were derived from: (1) Building footprint data, including [**the CN-OpenData**](https://doi.org/10.11888/Geogra.tpdc.271702) and [**the East Asia Building Dataset**](https://zenodo.org/records/8174931); and (2) Land use and AOI data used for constructing urban functional annotation are retrieved from [**the OpenStreetMap**](https://www.openstreetmap.org) and [**the EULUC-China dataset**](https://doi.org/10.1016/j.scib.2019.12.007). The first 1-meter resolution national-scale land-cover map used to conduct the accessibility analysis is available in our previous study: [**SinoLC-1**](https://doi.org/10.5281/zenodo.7707461). The housing inequality and infrastructure allocation analysis was conducted based on the 100-meter gridded population dataset from [**China's seventh census**](https://figshare.com/s/d9dd5f9bb1a7f4fd3734?file=43847643).
 ## Multi-dimensional Built Environment Analysis
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.
-* Please install the demo dataset to `input_data` from:e
+* Please install the example dataset to `input_data` from:e
 * The analysis is divided into three main components:
 
 | Component                                                         | Folder                          |
