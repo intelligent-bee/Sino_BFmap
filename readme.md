@@ -24,7 +24,56 @@ The original data sources required to create the map product and analyse the mul
 | Availability and Diversity                                     | `./availability_diversity_process` |
 | Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
 
-To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
+## Accessibility
+We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, and Public Service building.
+* **Directory Structure**
+```bash
+access_process/
+│
+├── 1_OSM_process.py              # Process OSM network into speed raster
+├── 2_LC_process.py               # Convert land cover types to speed values
+├── 3_merge.py                    # Merge OSM and land cover into cost raster
+├── 4_clip_buildingtype.py        # Clip selected building types
+├── whitebox_tools/
+│   └── cost_distance.py          # Run cost-distance analysis using WhiteboxTools
+└── 6_access_stats.py             # Extract travel time for residential buildings
+* **To conduct the accessibility analysis, follow these steps:**
+1. Assign Speeds to OSM Road Network and Convert to Raster  
+    python access_process/1_OSM_process.py
+
+2. Assign Speeds to Land Cover Types  
+    python access_process/2_LC_process.py
+
+3. Merge Land Cover and Road Network into Cost Raster  
+    python access_process/3_merge.py
+
+4. Clip Relevant Building Types (Healthcare, Educational, Public Services)  
+    python access_process/4_clip_buildingtype.py
+
+5. Run Cost Distance Analysis with WhiteboxTools  
+    python access_process/whitebox_tools/cost_distance.py
+
+6. Calculate Travel Time from Residential Buildings to Nearest Target Building  
+    python access_process/6_access_stats.py
+
+* **output**
+
+
+### Availability and Diversity
+python availability_diversity_process/1_nearby_buildings_stats.py
+
+python availability_diversity_process/2_cal_availability_diversity.py
+
+### Residential capacity allocation and Infrastructure occupation
+python inequal_allocation_process/1_raster_clip.py
+
+python inequal_allocation_process/2_cal_attribute.py
+
+python inequal_allocation_process/3_cal_inequality.py
+
+
+   
+* **To train and test the framework on any 109 cities contained in this study:**
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
