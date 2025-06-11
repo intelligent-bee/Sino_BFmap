@@ -154,7 +154,7 @@ if __name__ == '__main__':
         output_df[class_name+'_Area'] = []
         output_df[class_name+'_Area_Percapita'] = []
     output_df['city'].append(city_name)
-    df=pd.read_csv(os.path.join(root,'inequal_allocation_process/result',f'{city_name}.csv'))
+    df=pd.read_csv(os.path.join(root,'temp',f'{city_name}_attribute.csv'))
     for i in range(1,9):
         output_df[class_name1[i-1]+'_Area'].append(np.sum(df[df['class']==i]['Area'].values.flatten()))
         output_df[class_name1[i-1]+'_Area_Percapita'].append(np.sum(df[df['class']==i]['Area'].values.flatten())/pop)
