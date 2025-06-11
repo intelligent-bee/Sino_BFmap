@@ -27,21 +27,22 @@ The original data sources required to create the map product and analyse the mul
 ## Accessibility
 We calculated the travel time for residents in 109 Chinese cities from their homes to the nearest Healthcare, Educational, and Public Service building.
 * **Directory Structure**
-```bash
-access_process/
-│
-├── 1_OSM_process.py              # Process OSM network into speed raster
-├── 2_LC_process.py               # Convert land cover types to speed values
-├── 3_merge.py                    # Merge OSM and land cover into cost raster
-├── 4_clip_buildingtype.py        # Clip selected building types
-├── whitebox_tools/
-│   └── cost_distance.py          # Run cost-distance analysis using WhiteboxTools
-└── 6_access_stats.py             # Extract travel time for residential buildings
+
+    ```bash
+    access_process/
+    │
+    ├── 1_OSM_process.py              # Process OSM network into speed raster
+    ├── 2_LC_process.py               # Convert land cover types to speed values
+    ├── 3_merge.py                    # Merge OSM and land cover into cost raster
+    ├── 4_clip_buildingtype.py        # Clip selected building types
+    ├── whitebox_tools/
+    │   └── cost_distance.py          # Run cost-distance analysis using WhiteboxTools
+    └── 6_access_stats.py             # Extract travel time for residential buildings
 
 * **To conduct the accessibility analysis, follow these steps:**
 
 1. Assign Speeds to OSM Road Network and Convert to Raster
-    ```bash
+
     python access_process/1_OSM_process.py
 
 2. Assign Speeds to Land Cover Types  
