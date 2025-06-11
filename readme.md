@@ -1,6 +1,8 @@
 # Satellite Mapping of Every Building’s Function in Urban China Reveals Deep Built Environment Inequality
 **Author: Zhuohong Li, Linxin Li, Ting Hu, Mofan Cheng, Wei He, Tong Qiu, Liangpei Zhang, and Hongyan Zhang**
+
 **Affiliation: Duke University, Wuhan University, Nanjing University of Information Science and Technology, and China University of Geosciences**
+
 ##Background
 As the world’s most rapidly urbanizing country, China now faces mounting challenges from growing inequalities in the built environment, including disparities in access to essential infrastructure and diverse functional facilities. Yet these urban inequalities have remained unclear due to coarse observation scales and limited analytical scopes. In this study, we present the first building-level functional map of China, covering 110 million individual buildings across 109 cities using 69 terabytes of multi-modal satellite imagery. The national-scale map is validated by government reports and 5,280,695 observation points, showing strong agreement with external benchmarks. This enables the first nationwide, multi-dimensional assessment of inequality in the built environment across city tiers, geographical regions, and intra-city zones.
 
