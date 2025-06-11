@@ -26,6 +26,12 @@ The original data sources required to create the map product and analyse the mul
 
 To reproduce each component of the analysis, please refer to the `readme.md` file in the corresponding folder and follow the instructions.
 
+* **To reproduce the analysis on any 109 cities contained in this study:**
+
+1. Edit the root storage direction of the train and test list (.csv).
+2. Add your dataset_config in the "train.py" and "test.py" files.
+3. Run the command above by changing the city name.
+
 ## Building functional mapping
 The mapping process contains segmentation and object classification parts that are shown below:
 <img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Building_function-mapping-l.png" width="70%">
