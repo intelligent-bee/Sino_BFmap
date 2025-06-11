@@ -1,0 +1,5 @@
+image_fn,label_fn,group
+/home/ashelee/Building_classification/City/Macau/input_Macau_7band/0_image.tif,/home/ashelee/Building_classification/City/Macau/label_Macau/0_label.tif,0
+/home/ashelee/Building_classification/City/Macau/input_Macau_7band/1_image.tif,/home/ashelee/Building_classification/City/Macau/label_Macau/1_label.tif,0
+/home/ashelee/Building_classification/City/Macau/input_Macau_7band/2_image.tif,/home/ashelee/Building_classification/City/Macau/label_Macau/2_label.tif,0
+/home/ashelee/Building_classification/City/Macau/input_Macau_7band/3_image.tif,/home/ashelee/Building_classification/City/Macau/label_Macau/3_label.tif,0
