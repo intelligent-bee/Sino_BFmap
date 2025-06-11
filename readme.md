@@ -19,5 +19,5 @@ To reproduce each component of the analysis, please refer to the `readme.md` fil
 
 
 ## Description: 
-* For other experiments, please download and prepocess the whole datasets according to our Paper: https://figshare.com/s/f3979d3199a394911337
+* To reproduce all experimental results, please download and preprocess the complete dataset as described in our paper: https://figshare.com/s/f3979d3199a394911337.
 
