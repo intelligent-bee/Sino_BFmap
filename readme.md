@@ -29,7 +29,7 @@ To reproduce each component of the analysis, please refer to the `readme.md` fil
 ## Building functional mapping
 The mapping process contains segmentation and object classification parts that are shown below:
 <img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Building_function-mapping-l.png" width="70%">
-### Training Instructions of Semantic Segmentation Model (Paraformer)
+### 01 Training Instructions of Semantic Segmentation Model (Paraformer)
 We provide our original training lists for all 109 cities in the ` ./All_109_cities_trainlists/`  directory.
 * **To train and conduct the mapping with the Paraformer, follow these steps:**
   
@@ -50,7 +50,7 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
 2. Add your dataset_config in the "train.py" and "test.py" files.
 3. Run the command above by changing the city name.
 
-### Post-processing Based on the Object Classification Model (Mask RCNN)
+### 02 Post-processing Based on the Object Classification Model (Mask RCNN)
 ## Description: 
 * To reproduce all experimental results, please download and preprocess the complete dataset as described in our paper: https://figshare.com/s/f3979d3199a394911337.
 
