@@ -39,7 +39,7 @@ The original data sources required to create the map product and analyse the mul
     <tr>
       <td rowspan="3">Facility accessibility</td>
       <td>Accessibility of healthcare resources</td>
-      <td rowspan="3"> The indicators in this dimension include accessibility to healthcare, education, and public service facilities — are measured by calculating the average minimum travel time from residential buildings to each facility type. The corresponding processing scripts are available in the <code>./access_process</code> directory.</td>
+      <td rowspan="3"> Accessibility to healthcare, education, and public service facilities, which are measured by calculating the average minimum travel time from residential buildings to each facility type. The corresponding processing scripts are available in the <code>./access_process</code> directory.</td>
     </tr>
     <tr>
       <td>Accessibility of education resources</td>
@@ -50,11 +50,12 @@ The original data sources required to create the map product and analyse the mul
     <tr>
       <td rowspan="3">Infrastructure sufficiency</td>
       <td>Neighborhood amenity diversity</td>
-      <td>—</td>
+      <td>The diversity and availability of amenities in a 15-minute neighborhood circle for
+ each residence. The corresponding processing scripts are available in the <code>./availability_diversity_process</code> directory.</td>
     </tr>
     <tr>
       <td>Inequality in residential capacity allocation</td>
-      <td rowspan="2">Infrastructure equity</td>
+      <td rowspan="2">  The inequality in residential capacity allocation is quantified using the Gini coefficient. The indicator of per capita infrastructure occupation evaluates the relationship between infrastructure provision and population size. The processing scripts for both indicators are available in the <code>./inequal_allocation_process/result</code> directory.</td>
     </tr>
     <tr>
       <td>Per capita infrastructure occupation</td>
