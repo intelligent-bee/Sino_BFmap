@@ -21,7 +21,7 @@ The original data sources required to create the map product and analyse the mul
     <tr>
       <th>Assessment dimensions</th>
       <th>Indicators</th>
-      <th>Folders</th>
+      <th>Explainations</th>
     </tr>
   </thead>
   <tbody>
