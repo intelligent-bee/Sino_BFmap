@@ -28,7 +28,7 @@ The original data sources required to create the map product and analyse the mul
     <tr>
       <td rowspan="3">Urbanization intensity</td>
       <td>Building height</td>
-      <td rowspan="3">Urban morphology</td>
+      <td rowspan="3">The indicators in this dimension include building height, density, and nighttime light intensity. These are derived from external, third-party data sources: CNBH-10m for building height and SDGSAT-1 for nighttime light. Please note that the generation of these indicators is not included in the released code, as they rely on pre-existing datasets.</td>
     </tr>
     <tr>
       <td>Building density</td>
