@@ -106,8 +106,8 @@ inequal_allocation_process/
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
-1. Download the population map, building height map, and building function map to the `./input_data` folder
-2. Run the command above by changing the city name.
+1. Download the building height map and building function map to the `./input_data` folder
+2. Run the command above by changing the city name in `./config.py`.
 
 ## Building functional mapping
 The mapping process contains segmentation and object classification parts that are shown below:
