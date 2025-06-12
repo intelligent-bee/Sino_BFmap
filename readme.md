@@ -138,9 +138,15 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.  
 * **To train and conduct the Post-processing, follow these steps:**
 
-1. Vectorize the segmentation result and spilt the dataset by run the following command:
+1. Vectorize the segmentation result and split the dataset by running the following command:
    ```bash
-   CUDA_VISIBLE_DEVICES='your gpu id' python Building_mapping_02_post_processing/1-pipe_preprocess.py --dataset 'Building_mapping_sample_Jiaxing' --batch_size 10 --max_epochs 20 --savepath *save path of your folder* --gpu 0
-
+   python Building_mapping_02_post_processing/1_pipe_preprocess.py --city "Jiaxing" --input_tif " the segmentation result's save path"
+2. Train and identify the unclassified buildings:
+   ```bash
+   CUDA_VISIBLE_DEVICES='your gpu id'  python 'Building_mapping_02_post_processing/Pytorch_Mask_RCNN-master/trainval.py' --city "Jiaxing"
+3. Padding the origin result:
+   python Building_mapping_02_post_processing/3_pipe_postprocess.py --city "Jiaxing"
+The final shapefile result will be saved in the `./Building_mapping_02_post_processing/result`
+  
 
 
