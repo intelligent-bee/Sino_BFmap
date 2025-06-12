@@ -180,7 +180,7 @@ We provide our original training lists for all 109 cities in the ` ./Building_ma
 3. Run the command above by changing the city name.
 
 ### 02 Post-processing Based on the Object Classification Model (Mask RCNN)  
-* Please download the preprocessed training dataset to ` ./dataset/`.
+* Please download the preprocessed training dataset to ` ./dataset/`(same as step 1).
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.  
 * **To train and conduct the Post-processing, follow these steps:**
 
