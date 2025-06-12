@@ -77,7 +77,7 @@ The original data sources required to create the map product and analyse the mul
 
 
 
-## Accessibility  
+## Facility accessibility
 The code for calculating the accessibility of healthcare, education, and public service resources
 * **To conduct the accessibility analysis, follow these steps:**
 
@@ -115,13 +115,13 @@ access_process/
     └── backlink_Educational.tif  – Backlink raster for tracing the shortest path from each building.
 ```
 
-### Availability and Diversity  
-The code for calculating the facility availability and diversity of the community life cycle 
+### Neighborhood amenity diversity and availability 
+The code for calculating the neighborhood amenity diversity and availability.
 * **To conduct the analysis, follow these steps:**  
-1. Count the number and types of buildings within each community life circle  
+1. Count the number and types of buildings within each neighborhood amenity 
     ```bash
     python availability_diversity_process/1_nearby_buildings_stats.py
-2. Calculate the availability and diversity for each community life cycle 
+2. Calculate the availability and diversity for each neighborhood amenity 
     ```bash
     python availability_diversity_process/2_cal_availability_diversity.py
 * **Result**  
@@ -129,11 +129,11 @@ The results are saved in the `./availability_diversity_process/result`:
 ```
 availability_diversity_process/
 └── result/
-    ├── Jiaxing_availability_diversity.csv    – The availability and diversity of each community life circle, and the mean values of the whole city.
-    └── Jiaxing_buildings.csv                 – The number and types of buildings within each community life circle.
+    ├── Jiaxing_availability_diversity.csv    – The availability and diversity of each neighborhood amenity, and the mean values of the whole city.
+    └── Jiaxing_buildings.csv                 – The number and types of buildings within each neighborhood amenity.
 ```
 
-### Residential capacity allocation and Infrastructure occupation  
+### Inequality in residential capacity allocation and per capita infrastructure occupation
 The code for calculating the inequality in residential capacity allocation and per capita infrastructure occupation.
 
 * **To conduct the analysis, follow these steps:**
