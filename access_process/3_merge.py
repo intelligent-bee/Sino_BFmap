@@ -6,7 +6,7 @@ import argparse
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 
 # 列出要合并的 TIFF 文件路径
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ import argparse
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 
 wbt = WhiteboxTools()
 wbt.set_working_dir(os.path.dirname(os.path.abspath(__file__)) + "/data/")
@@ -68,7 +68,7 @@ def parse_args():
 
 # 设置文件路径
 if __name__ == '__main__':
-    city_name = 'Jiaxing'
+    city_name = CITY_NAME
     root = ROOT_DIR
     input_folder = os.path.join(root, 'temp')
     output_folder = os.path.join(root, 'access_process','result')

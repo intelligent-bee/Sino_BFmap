@@ -20,7 +20,7 @@ import json
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 
 def parse_args():
     """
@@ -37,7 +37,7 @@ def parse_args():
     return args
 
 if __name__ == '__main__':
-    city_name_list=['Jiaxing']
+    city_name_list=[CITY_NAME]
     for city_name in city_name_list:
         print(city_name)
         current=time.time()

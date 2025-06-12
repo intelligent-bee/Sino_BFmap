@@ -13,7 +13,7 @@ import argparse
 import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from config import ROOT_DIR
+from config import ROOT_DIR,CITY_NAME
 
 def clip_tif_with_shp(input_tif, input_shp, output_tif,class_name):
     # 读取矢量文件 (shp)
@@ -174,7 +174,7 @@ def save_histograms_and_statistics_to_excel(histograms, statistics, output_excel
 
 if __name__ == "__main__":
 
-    city_name = 'Jiaxing'
+    city_name = CITY_NAME
     root=ROOT_DIR
     input_folder = os.path.join(root, 'input_data')
     temp_folder = os.path.join(root, 'temp')
