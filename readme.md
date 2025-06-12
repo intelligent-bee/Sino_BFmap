@@ -66,13 +66,13 @@ The original data sources required to create the map product and analyse the mul
 
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.
 * Please download the [**example dataset (Jiaxing City)**](https://duke.box.com/s/hjnwgccyzo13ha4u4d82k6ye41qxo3sz) to `./input_data`.
-* The deployment guide for running these three parts is provided below:
+* The deployment guide for running these three parts is provided below.
 
 
 
 ## Facility accessibility
-The code for calculating the accessibility of healthcare, education, and public service resources
-* **To conduct the accessibility analysis, follow these steps:**
+The code for calculating the accessibility of healthcare, education, and public service facilities
+* **To conduct the analysis, follow these steps:**
 
 1. Assign speeds to the OSM road network and convert to raster
     ```bash
@@ -86,7 +86,7 @@ The code for calculating the accessibility of healthcare, education, and public 
     ```bash
    python access_process/3_merge.py
 
-4. Clip relevant building types (Healthcare, Educational, Public Services)
+4. Clip relevant facility types (Healthcare, Educational, Public Services)
     ```bash
     python access_process/4_clip_buildingtype.py
 
@@ -94,12 +94,12 @@ The code for calculating the accessibility of healthcare, education, and public 
     ```bash
     python access_process/whitebox_tools/cost_distance.py
 
-6. Calculate travel time from residential buildings to the nearest target building
+6. Calculate travel time from residential buildings to the nearest target facility
     ```bash
     python access_process/6_access_stats.py
 
 * **Result**  
-The results are saved in the `./access_process/result`. Below is an example for the Educational buildings:
+The results are saved in the `./access_process/result`. Below is an example for the Educational facility:
 ```
 access_process/
 └── result/
