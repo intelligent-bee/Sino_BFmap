@@ -165,7 +165,7 @@ if __name__ == "__main__":
 
     dataset_config = {
         'Building_mapping_sample_Jiaxing': {  # default dataset as a example
-            'list_dir': './All_109_cities_trainlists/Jiaxing_7band.csv', # The path of the *.csv file
+            'list_dir': './All_109_cities_trainlists/Jiaxing_7band_pred.csv', # The path of the *.csv file
             'num_classes': 10
         }
     }
