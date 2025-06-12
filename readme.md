@@ -133,7 +133,14 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
 2. Add your dataset_config in the "train.py" and "test.py" files.
 3. Run the command above by changing the city name.
 
-### 02 Post-processing Based on the Object Classification Model (Mask RCNN)
-## Description: 
-* To reproduce all experimental results, please download and preprocess the complete dataset as described in our paper: https://figshare.com/s/f3979d3199a394911337.
+### 02 Post-processing Based on the Object Classification Model (Mask RCNN)  
+* Please download the preprocessed training dataset to ` ./dataset/`.
+* Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.  
+* **To train and conduct the Post-processing, follow these steps:**
+
+1. Vectorize the segmentation result and spilt the dataset by run the following command:
+   ```bash
+   CUDA_VISIBLE_DEVICES='your gpu id' python Building_mapping_02_post_processing/1-pipe_preprocess.py --dataset 'Building_mapping_sample_Jiaxing' --batch_size 10 --max_epochs 20 --savepath *save path of your folder* --gpu 0
+
+
 
