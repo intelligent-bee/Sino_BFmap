@@ -65,7 +65,7 @@ The original data sources required to create the map product and analyse the mul
 
 
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.
-* Please download the [**example dataset (Jiaxing City)**](https://duke.box.com/s/hjnwgccyzo13ha4u4d82k6ye41qxo3sz) to `./input_data`.
+* Please download the [**example dataset (Jiaxing City)**](https://duke.box.com/s/hjnwgccyzo13ha4u4d82k6ye41qxo3sz) to `./input_data`
 * The deployment guide for running these three parts is provided below.
 
 
@@ -152,8 +152,8 @@ inequal_allocation_process/
 
 * **To reproduce the analysis on any 109 cities contained in this study:**
 
-1. Download the building height map and building function map to the `./input_data` folder
-2. Run the command above by changing the city name in `./config.py`.
+1. Download the building height map and building function map to the `./input_data` folder.
+2. Run the command above by changing the city name in `./config.py`
 
 ## Building functional mapping
 The mapping process contains segmentation and object classification parts that are shown below:
