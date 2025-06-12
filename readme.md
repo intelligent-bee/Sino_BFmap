@@ -39,7 +39,7 @@ The original data sources required to create the map product and analyse the mul
     <tr>
       <td rowspan="3">Facility accessibility</td>
       <td>Accessibility of healthcare resources</td>
-      <td rowspan="3"> The indicators under the dimension *Facility accessibility* — including accessibility to healthcare, education, and public service facilities — are measured by calculating the average minimum travel time from residential buildings to each facility type. These indicators are derived using cost distance analysis based on land cover and road network data. The corresponding processing scripts are available in the <code>./access_process</code> directory.</td>
+      <td rowspan="3"> The indicators in this dimension include accessibility to healthcare, education, and public service facilities — are measured by calculating the average minimum travel time from residential buildings to each facility type. The corresponding processing scripts are available in the <code>./access_process</code> directory.</td>
     </tr>
     <tr>
       <td>Accessibility of education resources</td>
