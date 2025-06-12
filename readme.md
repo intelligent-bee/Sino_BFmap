@@ -145,7 +145,9 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
    ```bash
    CUDA_VISIBLE_DEVICES='your gpu id'  python 'Building_mapping_02_post_processing/Pytorch_Mask_RCNN-master/trainval.py' --city "Jiaxing"
 3. Padding the origin result:
+   ```bash
    python Building_mapping_02_post_processing/3_pipe_postprocess.py --city "Jiaxing"
+   
 The final shapefile result will be saved in the `./Building_mapping_02_post_processing/result`
   
 
