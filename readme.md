@@ -164,7 +164,7 @@ We provide our original training lists for all 109 cities in the ` ./Building_ma
   
 1. Download the imagenet21k ViT pre-train model at [**Pre-train ViT**](https://drive.google.com/file/d/10Ao75MEBlZYADkrXE4YLg6VObvR0b2Dr/view?usp=sharing) and put it at ` ./Building_mapping_01_semantic_segmentation(Paraformer)/networks/pre-train_model/imagenet21k` 
    
-2. Taking the urban building mapping of Jiaxing City as an example, download the preprocessed training dataset (approximately 80GB per city) and unzip it to ` ./dataset/`.
+2. Taking the urban building mapping of Jiaxing City as an example, download the processed [**Training dataset**](https://duke.box.com/shared/static/y5f0w731z7lf2rozdjd77pj0vopeizg7.zip) (approximately 80GB per city) and unzip it to ` ./dataset/`.
    
 3. Run the "Train" command to train the Paraformer at the example city:
    ```bash
