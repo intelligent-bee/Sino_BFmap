@@ -64,17 +64,9 @@ The original data sources required to create the map product and analyse the mul
 </table>
 
 
-
-
-| Component                                                         | Folder                          |
-|-------------------------------------------------------------------|---------------------------------|
-| Accessibility                                                  | `./access_process`               |
-| Availability and Diversity                                     | `./availability_diversity_process` |
-| Residential Capacity Allocation and Infrastructure Occupation | `./inequal_allocation_process`   |
-
 * Please run "pip install -r `requirements_analysis.txt`" to install the dependencies before executing any Python file.
 * Please download the [**example dataset (Jiaxing City)**](https://duke.box.com/s/hjnwgccyzo13ha4u4d82k6ye41qxo3sz) to `./input_data`.
-* The analysis is divided into three main components:
+* The deployment guide for running these three parts is provided below:
 
 
 
