@@ -16,17 +16,51 @@ The original data sources required to create the map product and analyse the mul
 ## Multi-dimensional Built Environment Analysis
 
 
-| Assessment dimensions       | Indicators                                | Folders                  |
-|-----------------------------|--------------------------------------------|--------------------------|
-| **Urbanization intensity**  | Building height                            | Urban morphology         |
-|                             | Building density                           |                          |
-|                             | Nighttime light intensity                  |                          |
-| **Facility accessibility**  | Accessibility of healthcare resources      | Service accessibility    |
-|                             | Accessibility of education resources       |                          |
-|                             | Accessibility of public service resources  |                          |
-| **Infrastructure sufficiency** | Neighborhood amenity diversity          |                          |
-|                             | Inequality in residential capacity allocation | Infrastructure equity |
-|                             | Per capita infrastructure occupation       |                          |
+<table>
+  <thead>
+    <tr>
+      <th>Assessment dimensions</th>
+      <th>Indicators</th>
+      <th>Folders</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Urbanization intensity</td>
+      <td>Building height</td>
+      <td rowspan="3">Urban morphology</td>
+    </tr>
+    <tr>
+      <td>Building density</td>
+    </tr>
+    <tr>
+      <td>Nighttime light intensity</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Facility accessibility</td>
+      <td>Accessibility of healthcare resources</td>
+      <td rowspan="3">Service accessibility</td>
+    </tr>
+    <tr>
+      <td>Accessibility of education resources</td>
+    </tr>
+    <tr>
+      <td>Accessibility of public service resources</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Infrastructure sufficiency</td>
+      <td>Neighborhood amenity diversity</td>
+      <td rowspan="2"></td>
+    </tr>
+    <tr>
+      <td>Inequality in residential capacity allocation</td>
+      <td rowspan="2">Infrastructure equity</td>
+    </tr>
+    <tr>
+      <td>Per capita infrastructure occupation</td>
+    </tr>
+  </tbody>
+</table>
 | Component                                                         | Folder                          |
 |-------------------------------------------------------------------|---------------------------------|
 | Accessibility                                                  | `./access_process`               |
