@@ -197,6 +197,8 @@ We provide our original training lists for all 109 cities in the ` ./Building_ma
    python Building_mapping_02_post_processing/3_pipe_postprocess.py --city "Jiaxing"
    
 The final shapefile result will be saved in the `./Building_mapping_02_post_processing/result`
+* An example of the input data and the produced results of building functional maps.
+<img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Mapping_result.png" width="70%">
   
 
 
