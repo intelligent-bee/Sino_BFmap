@@ -19,13 +19,12 @@ def parse_args():
   
 if __name__ == '__main__':
     args=parse_args()
-    args=parse_args()  
     root=ROOT_DIR
     city_name=args.city
     output_folder=os.path.join(ROOT_DIR,'temp')
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
-    footprint_path='/data/ashelee/Building_classification/City/Jiaxing/BM_Jiaxing.shp'
+    footprint_path=os.path.join(ROOT_DIR,'dataset',str(city_name),f'BM_{city_name}.shp')
     output_path=os.path.join(output_folder,city_name+'_origin.shp')
     city_root=os.path.join(ROOT_DIR,'Building_mapping_02_post_processing','data',city_name)
     pred_box_path=os.path.join(city_root,'pred')

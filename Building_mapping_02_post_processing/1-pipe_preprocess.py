@@ -20,9 +20,6 @@ def parse_args():
   parser.add_argument('--input_tif', dest='input_tif',
                       help='the result of segmentation',
                       default="/data/ashelee/Building_classification/model/Jiaxing_HRNet_7band_std_w19/Jiaxing_HRNet_7band_std_w19_epoch60_OL.tif", type=str)
-#   parser.add_argument('--input_tif', dest='input_tif',
-#                       help='the result of segmentation',
-#                       default="/data/ashelee/Building_classification/model/Jiaxing_HRNet_7band_std_w19/Jiaxing_HRNet_7band_std_w19_epoch60_OL.tif", type=str)
   args = parser.parse_args()
   return args
 if __name__ == '__main__':
