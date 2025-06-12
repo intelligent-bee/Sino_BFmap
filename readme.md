@@ -50,7 +50,7 @@ The original data sources required to create the map product and analyse the mul
     <tr>
       <td rowspan="3">Infrastructure sufficiency</td>
       <td>Neighborhood amenity diversity</td>
-      <td rowspan="2"></td>
+      <td>—</td>
     </tr>
     <tr>
       <td>Inequality in residential capacity allocation</td>
@@ -61,6 +61,7 @@ The original data sources required to create the map product and analyse the mul
     </tr>
   </tbody>
 </table>
+
 
 
 
