@@ -72,7 +72,7 @@ The original data sources required to create the map product and analyse the mul
 
 
 
-## Facility accessibility
+### 01 Facility accessibility
 The code for calculating the accessibility of healthcare, education, and public service facilities
 * **To conduct the analysis, follow these steps:**
 
@@ -110,7 +110,7 @@ access_process/
     └── backlink_Educational.tif  – Backlink raster for tracing the shortest path from each building.
 ```
 
-### Neighborhood amenity diversity and availability 
+### 02 Neighborhood amenity diversity and availability 
 The code for calculating the neighborhood amenity diversity and availability.
 * **To conduct the analysis, follow these steps:**  
 1. Count the number and types of buildings within each neighborhood amenity 
@@ -128,7 +128,7 @@ availability_diversity_process/
     └── Jiaxing_buildings.csv                 – The number and types of buildings within each neighborhood amenity.
 ```
 
-### Inequality in residential capacity allocation and per capita infrastructure occupation
+### 03 Inequality in residential capacity allocation and per capita infrastructure occupation
 The code for calculating the inequality in residential capacity allocation and per capita infrastructure occupation.
 
 * **To conduct the analysis, follow these steps:**
