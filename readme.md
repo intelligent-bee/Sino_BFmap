@@ -141,7 +141,7 @@ We provide our original training lists for all 109 cities in the ` ./All_109_cit
 1. Vectorize the segmentation result and split the dataset by running the following command:
    ```bash
    python Building_mapping_02_post_processing/1_pipe_preprocess.py --city "Jiaxing" --input_tif " the segmentation result's save path"
-2. Train and identify the unclassified buildings:
+2. Train and reclassify the unclassified buildings:
    ```bash
    CUDA_VISIBLE_DEVICES='your gpu id'  python 'Building_mapping_02_post_processing/Pytorch_Mask_RCNN-master/trainval.py' --city "Jiaxing"
 3. Padding the origin result:
