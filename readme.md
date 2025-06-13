@@ -162,6 +162,7 @@ The mapping process contains segmentation and object classification parts that a
 <img src="https://github.com/LiZhuoHong/Paraformer/blob/main/Fig/Building_function-mapping-l.png" width="70%">
 ### 01 Training Instructions of Semantic Segmentation Model (Paraformer)
 We provide our original training lists for all 109 cities in the ` ./Building_mapping_01_semantic_segmentation/All_109_cities_trainlists/`  directory.
+* Please run "pip install -r `requirements_segmentation.txt`" to install the dependencies before executing any Python file.  
 * **To train and conduct the mapping with the Paraformer, follow these steps:**
   
 1. Download the imagenet21k ViT pre-train model at [**Pre-train ViT**](https://drive.google.com/file/d/10Ao75MEBlZYADkrXE4YLg6VObvR0b2Dr/view?usp=sharing) and put it at ` ./Building_mapping_01_semantic_segmentation/networks/pre-train_model/imagenet21k` 
